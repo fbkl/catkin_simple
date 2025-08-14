@@ -126,6 +126,7 @@ macro(catkin_simple)
 endmacro()
 
 macro(cs_add_targets_to_package)
+  include_directories(/maplab_ws/devel/include)
   add_dependencies(${PROJECT_NAME}_package ${ARGN})
   list(APPEND ${PROJECT_NAME}_TARGETS ${ARGN})
 endmacro()
